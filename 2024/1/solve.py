@@ -1,6 +1,5 @@
 import sys
 from collections import Counter
-import operator
 
 
 def readlines():
@@ -9,7 +8,6 @@ def readlines():
 
 
 def preprocess(lines):
-    sp = [line.split() for line in lines]
     firsts, seconds = [item for item in zip(*[line.split() for line in lines])]
     return firsts, seconds
 
