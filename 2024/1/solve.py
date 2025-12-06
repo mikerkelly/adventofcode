@@ -14,8 +14,7 @@ def preprocess(lines):
 
 def part1(firsts, seconds):
     pairs = zip(
-        sorted(int(item) for item in firsts),
-        sorted(int(item) for item in seconds)
+        sorted(int(item) for item in firsts), sorted(int(item) for item in seconds)
     )
     return sum(abs(pair[0] - pair[1]) for pair in pairs)
 

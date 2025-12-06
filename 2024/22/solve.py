@@ -36,9 +36,9 @@ def part1(lines, length):
 def part2(lines, length):
     seq_prices = {}
     for secret in lines:
-        secrets = [secret] + [secret := next_secret(secret) for _ in range(length- 1)]
+        secrets = [secret] + [secret := next_secret(secret) for _ in range(length - 1)]
         prices = [secret % 10 for secret in secrets]
-        moves = [prices[1:][ii] - prices[ii] for ii in range(len(prices)-1)]
+        moves = [prices[1:][ii] - prices[ii] for ii in range(len(prices) - 1)]
 
         seqs_seen = set()
         for index in range(len(prices) - 4):
